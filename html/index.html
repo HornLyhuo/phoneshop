@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhoneHub | Online Phone Store</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!--Navigation bar-->
+    <header class="bg-white border-b sticky top-0 z-50">
+
+        <!-- Top Information --> 
+        <div class="bg-gray-950 text-white text-sm py-2">
+            <div class="max-w-7xl mx-auto px-4 flex justify-between">
+                <p>
+                    <i class="fa-solid fa-truck-fast mr-2"></i>
+                    Free delivery for orders over $500
+                </p>
+                <p class="hidden sm:block">
+                    Need help? +855 12 345 678
+                </p>
+            </div>
+        </div>
+
+        <!-- Main Navbar -->
+
+        <div class="max-w-7xl mx-auto px-4 py-4">
+
+            <div class="flex justify-between items-center gap-6">
+
+                <!--Loop-->
+                <a href="#" class="text-2xl font-extrabold text-blue-500">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    Phone<span class="text-gray-800">Shop</span>
+                </a>
+
+                <!--Search-->
+                <div class="hidden md:flex flex-1 max-w-xl">
+                    <div class="flex w-full border rounded-lg overflow-hidden">
+                        <input type="text" 
+                            placeholder="Search smartphone, brands...." 
+                            class="w-full px-4 py-3 outline-none"
+                        >
+                        <button class="bg-blue-600 text-white px-6 hover:bg-blue-700">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!--User Actions-->
+                <div class="flex item-center gap-5">
+                    <a href="#" class="hidden sm:block text-center hover:text-blue-600">
+                        <i class="fa-regular fa-user text-xl"></i>
+                        <p class="text-xs mt-1">Account</p>
+                    </a>
+                    <a href="#" class="hidden sm:block text-center hover:text-blue-600">
+                        <i class="fa-regular fa-heart text-xl"></i>
+                        <p class="text-xs mt-1">Wishlist</p>
+                    </a>
+                    <a href="#" id="cart-btn" class="text-center hover:text-blue-600">
+                        <i class="fa-solid fa-cart-shopping text-xl"></i>
+                        <span id="cart-count" class="absolute -top-2 -right-3 bg-red-500 text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                        <p class="text-xs mt-1">Cart</p>
+                    </a>
+                </div>
+            </div>
+
+            <!--Navigation Links-->
+            <nav class="hidden md:flex items-center gap-8 mt-5 text-sm font-semibold">
+                <a href="#" class="hover:text-blue-600">Home</a>
+                <a href="#categories" class="hover:text-blue-600">Categories</a>
+                <a href="#products" class="hover:text-blue-600">Products</a>
+                <a href="#deals" class="hover:text-blue-600">Specail Deals</a>
+                <a href="#reviews" class="hover:text-blue-600">Reviews</a>
+                <a href="#contact" class="hover:text-blue-600">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+    
+
+    <!--Hero Section-->
+    <section class="bg-slate-950 text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 py-16 lg:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!--Hero Text-->
+                <div>
+                    <span class="bg-blue-500/20 text-blue-400 px-2 rounded-full text-sm font-semibold">
+                        NEW COLLECTION 2026
+                    </span>
+                    
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mt-7">
+                        Discover Your
+                        <span class="text-blue-500">Next</span>
+                        Smartphone.
+                    </h1>
+
+                    <p class="text-gray-400 mt-6 leading-7 max-w-lg">
+                        Explore the latest smartphones from the world's leading brands. Premium technology, amazing prices and an experience.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 mt-8">
+                        <a href="#products" class="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg font-semibold">
+                            Shope now
+                            <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+
+                        <a href="#categories" 
+                        
+                        class="border border-gray-600 hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold">
+                            Explore Brands
+                        </a>
+                    </div>
+
+                    <!--statistics-->
+                    <div class="grid grid-cols-3 gap-5 mt-12 border-t border-gray-800 pt-8">
+                        <duv>
+                            <h3 class="text-2xl font-bold">10K+</h3>
+                            <p class="text-gray-400 text-sm mt-1">Customers</p>
+                        </duv>
+                        
+                        <duv>
+                            <h3 class="text-2xl font-bold">500+</h3>
+                            <p class="text-gray-400 text-sm mt-1">Products</p>
+                        </duv>
+
+                        <duv>
+                            <h3 class="text-2xl font-bold">4.9/5</h3>
+                            <p class="text-gray-400 text-sm mt-1">Rating</p>
+                        </duv>
+                    </div>
+
+                </div>
+
+                <!--Hero Image-->
+                <div class="relative">
+                    <div class="absolute inset-10 bg-blue-600/30 blur-3xl rounded-full"></div>
+                    <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=900" alt="Premium smartphone"
+                        class="relative w-full max-h-[480px] object-contain rounded-2xl"
+                    > 
+                    <div class="absolute bottom-5 left-5 bg-white text-gray-900 p-5 rounded-xl shadow-xl">
+                        <p class="text-sm text-gray-500">Starting form</p>
+                        <h3 class="text-2xl font-bold">$799</h3>
+                        <p class="text-sm text-blue-600 font-semibold">Premium collection</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Benefits-->
+    <section class="bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="flex items-center gap-4">
+                <i class="fa-solid fa-truck-fast text-3xl text-blue-600"></i>
+                <div>
+                    <h3 class="font-bold">Free Delivery</h3>
+                    <p class="text-sm text-gray-500">On Select Orders</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <i class="fa-solid fa-shield-halved text-3xl text-blue-600"></i>
+                <div>
+                    <h3 class="font-bold">Official Warranty</h3>
+                    <p class="text-sm text-gray-500">Genuine products</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <i class="fa-solid fa-rotate-left text-3xl text-blue-600"></i>
+                <div>
+                    <h3 class="font-bold">Easy Returns</h3>
+                    <p class="text-sm text-gray-500">7-day return policy</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <i class="fa-solid fa-headset text-3xl text-blue-600"></i>
+                <div>
+                    <h3 class="font-bold">24/7 Support</h3>
+                    <p class="text-sm text-gray-500">Customer assinstace</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Category-->
+    <section id="categories" class="max-w-7xl mx-auto px-4 py-16">
+        <div class="flex justify-between items-end mb-8">
+            <div>
+                <p class="text-blue-600 font-semibold">EXPLORE BRANDS</p>
+                <h2 class="text-3xl font-bold mt-2">Shop By Category</h2>
+                <p class="text-gray-500 mt-2">Find your favorite smartphones brand.</p>
+            </div>
+            <a href="#products" class="text-blue-600 font-semibold">
+                View All 
+                <i class="fa-solid fa-arrow-right ml-1"></i>
+            </a>
+        </div>
+
+        <div id="categories-grid" class="grid grid-cols-2 md-grid-cols-6 lg:grid-cols-6 gap-5">
+
+            <!--Apple-->
+            <!-- <a href="#products" class="bg-white border rounded-xl p-6 text-center hover:shadow-lg hover:border-blue-600 transition">
+                <i class="fa-brands fa-apple text-5xl"></i>
+                <h3 class="font-bold mt-4">Apple</h3>
+                <p class="text-xs text-gray-500 mt-1">iPhone Series</p>
+            </a> -->
+
+            <!--Samsung-->
+            <!-- <a href="#products" class="bg-white border rounded-xl p-6 text-center hover:shadow-lg hover:border-blue-600 transition">
+                <i class="fa-solid fa-mobile-screen text-5xl text-blue-600"></i>
+                <h3 class="font-bold mt-4">Samsung</h3>
+                <p class="text-xs text-gray-500 mt-1">Galaxy Series</p>
+            </a> -->
+            <!--Xiaomi-->
+            <!-- <a href="#products" class="bg-white border rounded-xl p-6 text-center hover:shadow-lg hover:border-blue-600 transition">
+                <i class="fa-solid fa-mobile-screen-button text-5xl text-orange-500"></i>
+                <h3 class="font-bold mt-4">Xiaomi</h3>
+                <p class="text-xs text-gray-500 mt-1">Mi Series</p>
+            </a> -->
+
+            <!--Oppo-->
+            <!-- <a href="#products" class="bg-white border rounded-xl p-6 text-center hover:shadow-lg hover:border-blue-600 transition">
+                <i class="fa-solid fa-mobile text-5xl text-green-600"></i>
+                <h3 class="font-bold mt-4">Oppo</h3>
+                <p class="text-xs text-gray-500 mt-1">Reno Series</p>
+            </a> -->
+
+            <!--Vivo-->
+            <!-- <a href="#products" class="bg-white border rounded-xl p-6 text-center hover:shadow-lg hover:border-blue-600 transition">
+                <i class="fa-solid fa-mobile-screen text-5xl text-indigo-600"></i>
+                <h3 class="font-bold mt-4">Vivo</h3>
+                <p class="text-xs text-gray-500 mt-1">Vivo Series</p>
+            </a> -->
+
+            <!--Google-->
+            <!-- <a href="#products" class="bg-white border rounded-xl p-6 text-center hover:shadow-lg hover:border-blue-600 transition">
+                <i class="fa-brands fa-google text-5xl text-red-500"></i>
+                <h3 class="font-bold mt-4">Google</h3>
+                <p class="text-xs text-gray-500 mt-1">Pixel Series</p>
+            </a> -->
+        </div>
+    </section>
+
+    <!--FLASH SALE-->
+    <section id="deals" class="bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <!--description-->
+                <div>
+                    <span class="text-blue-200 font-semibold">
+                        LIMITED TIME OFFER
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold mt-2">
+                        Flash Sale
+                    </h2>
+                    <p class="text-blue-100 mt-2">
+                        Don't miss your chang to get amazing deals.
+                    </p>
+                </div>
+
+                <!--time left-->
+                <div class="flex gap-3">
+                    <div class="bg-white text-blue-600 rounded-lg p-4 text-center min-w-16">
+                        <h3 class="text-2xl font-bold">12</h3>
+                        <p class="text-xs">Hours</p>
+                    </div>
+                    <div class="bg-white text-blue-600 rounded-lg p-4 text-center min-w-16">
+                        <h3 class="text-2xl font-bold">35</h3>
+                        <p class="text-xs">Minutes</p>
+                    </div>
+                    <div class="bg-white text-blue-600 rounded-lg p-4 text-center min-w-16">
+                        <h3 class="text-2xl font-bold">48</h3>
+                        <p class="text-xs">Seconds</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--============ Products ===========-->
+    <section id="products" class="max-w-7xl mx-auto px-4 py-16">
+
+        <!--Heading-->
+        <div class="max-w-7xl mx-auto flex justify-between">
+            <div>
+                <p class="text-blue-600 font-semibold">
+                    OUR COLLECTION 
+                </p>
+                <H2 class="text-3xl font-bold mt-2">
+                    Popular Smartphones
+                </H2>
+                <p class="text-gray-500 mt-2">
+                    Explore our best-selling smartphones.
+                </p>
+            </div>
+            <a href="#" class="text-blue-600 font-semibold">
+                View All Products <i class="fa-solid fa-arrow-right ml-1"></i>
+            </a>
+        </div>
+
+        <!--Devider Two Layout-->
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!--FILTER SIDEBAR-->
+            <aside class="bg-white border rounded-xl p-6 h-fit">
+                <h3 class="text-xl font-bold mb-6">Filters</h3>
+                <!--brand-->
+                <div class="border-b pb-6 mb-6">
+                    <h3 class="Font-bold mb-4">Brand</h3>
+                    <div class="space-y-3 text-sm">
+                        <label class="flex item-center gap-3">
+                            <input type="radio" class="accent-blue-600">
+                            Apple
+                        </label>
+
+                        <label class="flex item-center gap-3">
+                            <input type="radio" class="accent-blue-600">
+                            Samsung
+                        </label>
+
+                        <label class="flex item-center gap-3">
+                            <input type="radio" class="accent-blue-600">
+                            Xiaomi
+                        </label>    
+
+                        <label class="flex item-center gap-3">
+                            <input type="radio" class="accent-blue-600">
+                            Oppo
+                        </label>    
+
+                        <label class="flex item-center gap-3">  
+                            <input type="radio" class="accent-blue-600">
+                            Vivo
+                        </label>
+                    </div>
+                </div>
+
+                <!--Price-->
+                <div class="border-b pb-6 mb-6">
+                    <h3 class="font-bold mb-4">Price Rang</h3>
+
+                    <input type="range" min="100" max="200" class="w-full accent-blue-600">
+
+                    <div class="flex justify-between text-sm text-gray-500 mt-2">
+                        <span>$100</span>
+                        <span>$2,000</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3 mt-4">
+                        <input type="number" placeholder="Min" class="border rounded-lg px-3 py-2 w-full">
+                        <input type="number" placeholder="Max" class="border rounded-lg px-3 py-2 w-full">
+                    </div>
+                </div>
+
+                <!--Storage-->
+                <div class="border-b pb-6 mb-6">
+                    <h4 class="font-bold mb-4">Storage</h4>
+                    <div class="space-y-3 text-sm">
+                        <label class="flex item-center gap-3">
+                            <input type="checkbox" class="accent-blue-600">
+                            128GB
+                        </label>
+
+                        <label class="flex item-center gap-3">
+                            <input type="checkbox" class="accent-blue-600">
+                            256GB
+                        </label>
+
+                        <label class="flex item-center gap-3">
+                            <input type="checkbox" class="accent-blue-600">
+                            512GB
+                        </label>
+
+                        <label class="flex item-center gap-3">
+                            <input type="checkbox" class="accent-blue-600">
+                            1TB
+                        </label>
+                    </div>
+                </div>
+
+                <!--Condition-->
+                <div>
+                    <h4 class="font-bold mb-4">Condition</h4>
+                    <div class="space-y-3 text-sm">
+                        <label class="flex gap-3">
+                            <input type="checkbox" class="accent-blue-600">
+                            Brand New
+                        </label>
+
+                        <label class="flex gap-3">
+                            <input type="checkbox" class="accent-blue-600">
+                            Used
+                        </label>
+
+                        <label class="flex gap-3">
+                            <input type="checkbox" class="accent-blue-600">
+                            Refurbished
+                        </label>
+                    </div>
+                </div>
+                <button class="w-full bg-blue-600 text-white rounded-lg py-3 mt-7 hover:bg-blue-700">
+                    Apply Filters
+                </button>
+                <button class="w-full border rounded-lg mt-3 py-3 hover:bg-gray-100">
+                    Reset Filters
+                </button>
+            </aside>
+
+            <!--Product Grid-->
+            <div class="lg:col-span-3">
+
+                <!--Product Toolbar-->
+                <div class="flex flex-col sm:flex-row justify-between gap-4 mb-6">
+                    <p class="text-gray-500">
+                        Showing <span class="font-bold text-gray-900">8</span> Products
+                    </p>
+
+                    <select class="border bg-white rounded-lg px-4 py-2 outline-none">
+                        <option>Short By: Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Newest Arrivals</option>
+                        <option>Best Rating</option>
+                    </select>
+                </div>
+
+                <!--Product Cart-->
+                <div id="cart" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+
+                    <!--Product 1-->
+                    <!-- <div class="bg-white border rounded-xl overflow-hidden group hover:shadow-xl transition">
+
+                        <div class="relative bg-gray-100 p-5">
+                            <span class="absolute top-4 left-4 bg-red-500 text-white text-xs px-3 py-1 rounded-full">
+                                15% OFF
+                            </span>
+
+                            <button aria-label="Add to wishlist" class="absolute top-4 right-4 bg-white rounded-full w-9 h-9 shadow">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=500" alt="iPhone 16 Pro Max"
+                                class="w-full h-52 object-contain group-hover:scale-105 transition"
+                            >
+                        </div>
+                        <div class="p-5">
+                            <p class="text-xs text-gray-500">Apple</p>
+
+                            <h3 class="font-bold text-lg mt-1">iPhone 16 Pro Max</h3>
+
+                            <div class="flex items-center gap-1 text-yellow-400 text-sm mt-2">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span class="text-gray-400 ml-1">(120)</span>
+                            </div>
+
+                            <p class="text-sm text-gray-500 mt-3">256GB / Titanium</p>
+
+                            <div>
+                                <span class="text-xl font-bold text-blue-600">
+                                    $1,099
+                                </span>
+                                <span class="text-sm text-gray-400 line-through">
+                                    $1,299
+                                </span>
+                            </div>
+                            <p class="text-green-600 text-sm mt-2">
+                                <i class="fa-solid fa-circle-check"></i>
+                                In Stock
+                            </p>
+                            <button class="w-full bg-blue-600 text-white py-3 rounded-lg mt-4 hover:bg-blue-700">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div> -->
+
+                    <!-- PRODUCT 2 -->
+                    <!-- <div class="bg-white border rounded-xl overflow-hidden group hover:shadow-xl transition">
+
+                        <div class="relative bg-gray-100 p-5">
+
+                            <span class="absolute top-4 left-4 bg-red-500 text-white text-xs px-3 py-1 rounded-full">
+                                -10%
+                            </span>
+
+                            <button aria-label="Add to wishlist"
+                                    class="absolute top-4 right-4 bg-white rounded-full w-9 h-9 shadow">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=500"
+                                alt="Samsung Galaxy Ultra"
+                                class="w-full h-52 object-contain group-hover:scale-105 transition">
+
+                        </div>
+
+                        <div class="p-5">
+
+                            <p class="text-xs text-gray-500">SAMSUNG</p>
+
+                            <h3 class="font-bold text-lg mt-1">
+                                Samsung Galaxy S25 Ultra
+                            </h3>
+
+                            <div class="flex items-center gap-1 text-yellow-400 text-sm mt-2">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span class="text-gray-400 ml-1">(98)</span>
+                            </div>
+
+                            <p class="text-sm text-gray-500 mt-3">
+                                512GB / Titanium Gray
+                            </p>
+
+                            <div class="flex items-center gap-2 mt-4">
+                                <span class="text-xl font-bold text-blue-600">$1,199</span>
+                                <span class="text-sm text-gray-400 line-through">$1,299</span>
+                            </div>
+
+                            <p class="text-green-600 text-xs mt-2">
+                                <i class="fa-solid fa-circle-check"></i>
+                                In Stock
+                            </p>
+
+                            <button class="w-full bg-blue-600 text-white py-3 rounded-lg mt-4 hover:bg-blue-700">
+                                <i class="fa-solid fa-cart-plus mr-2"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div> -->
+
+
+                    <!-- PRODUCT 3 -->
+                    <!-- <div class="bg-white border rounded-xl overflow-hidden group hover:shadow-xl transition">
+
+                        <div class="relative bg-gray-100 p-5">
+
+                            <span class="absolute top-4 left-4 bg-green-500 text-white text-xs px-3 py-1 rounded-full">
+                                NEW
+                            </span>
+
+                            <button aria-label="Add to wishlist"
+                                    class="absolute top-4 right-4 bg-white rounded-full w-9 h-9 shadow">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh7QkuOOdHBzRC58d7POpOSfB6N-PSrejq6UmAljsgnrP-CCFpHH4Pq6k&s=10"
+                                alt="Xiaomi Smartphone"
+                                class="w-full h-52 object-contain group-hover:scale-105 transition">
+
+                        </div>
+
+                        <div class="p-5">
+
+                            <p class="text-xs text-gray-500">XIAOMI</p>
+
+                            <h3 class="font-bold text-lg mt-1">
+                                Xiaomi 15 Pro
+                            </h3>
+
+                            <div class="flex items-center gap-1 text-yellow-400 text-sm mt-2">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <span class="text-gray-400 ml-1">(85)</span>
+                            </div>
+
+                            <p class="text-sm text-gray-500 mt-3">
+                                256GB / Black
+                            </p>
+
+                            <div class="mt-4">
+                                <span class="text-xl font-bold text-blue-600">$899</span>
+                            </div>
+
+                            <p class="text-green-600 text-xs mt-2">
+                                <i class="fa-solid fa-circle-check"></i>
+                                In Stock
+                            </p>
+
+                            <button class="w-full bg-blue-600 text-white py-3 rounded-lg mt-4 hover:bg-blue-700">
+                                <i class="fa-solid fa-cart-plus mr-2"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div> -->
+
+
+                    <!-- PRODUCT 4 -->
+                    <!-- <div class="bg-white border rounded-xl overflow-hidden group hover:shadow-xl transition">
+
+                        <div class="relative bg-gray-100 p-5">
+
+                            <span class="absolute top-4 left-4 bg-red-500 text-white text-xs px-3 py-1 rounded-full">
+                                -12%
+                            </span>
+
+                            <button aria-label="Add to wishlist"
+                                    class="absolute top-4 right-4 bg-white rounded-full w-9 h-9 shadow">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <img src="https://images.unsplash.com/photo-1678685888221-cda773a3dcdb?w=500"
+                                alt="iPhone 15"
+                                class="w-full h-52 object-contain group-hover:scale-105 transition">
+
+                        </div>
+
+                        <div class="p-5">
+
+                            <p class="text-xs text-gray-500">APPLE</p>
+
+                            <h3 class="font-bold text-lg mt-1">
+                                iPhone 15
+                            </h3>
+
+                            <div class="flex items-center gap-1 text-yellow-400 text-sm mt-2">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <span class="text-gray-400 ml-1">(75)</span>
+                            </div>
+
+                            <p class="text-sm text-gray-500 mt-3">
+                                128GB / Blue
+                            </p>
+
+                            <div class="flex items-center gap-2 mt-4">
+                                <span class="text-xl font-bold text-blue-600">$699</span>
+                                <span class="text-sm text-gray-400 line-through">$799</span>
+                            </div>
+
+                            <p class="text-green-600 text-xs mt-2">
+                                <i class="fa-solid fa-circle-check"></i>
+                                In Stock
+                            </p>
+
+                            <button class="w-full bg-blue-600 text-white py-3 rounded-lg mt-4 hover:bg-blue-700">
+                                <i class="fa-solid fa-cart-plus mr-2"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div> -->
+
+
+                    <!-- PRODUCT 5 -->
+                    <!-- <div class="bg-white border rounded-xl overflow-hidden group hover:shadow-xl transition">
+
+                        <div class="relative bg-gray-100 p-5">
+
+                            <span class="absolute top-4 left-4 bg-orange-500 text-white text-xs px-3 py-1 rounded-full">
+                                HOT
+                            </span>
+
+                            <button aria-label="Add to wishlist"
+                                    class="absolute top-4 right-4 bg-white rounded-full w-9 h-9 shadow">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <img src="https://images.unsplash.com/photo-1605236453806-6ff36851218e?w=500"
+                                alt="Oppo smartphone"
+                                class="w-full h-52 object-contain group-hover:scale-105 transition">
+
+                        </div>
+
+                        <div class="p-5">
+
+                            <p class="text-xs text-gray-500">OPPO</p>
+
+                            <h3 class="font-bold text-lg mt-1">
+                                OPPO Find X Series
+                            </h3>
+
+                            <div class="flex items-center gap-1 text-yellow-400 text-sm mt-2">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span class="text-gray-400 ml-1">(66)</span>
+                            </div>
+
+                            <p class="text-sm text-gray-500 mt-3">
+                                256GB / Green
+                            </p>
+
+                            <div class="mt-4">
+                                <span class="text-xl font-bold text-blue-600">$799</span>
+                            </div>
+
+                            <p class="text-green-600 text-xs mt-2">
+                                <i class="fa-solid fa-circle-check"></i>
+                                In Stock
+                            </p>
+
+                            <button class="w-full bg-blue-600 text-white py-3 rounded-lg mt-4 hover:bg-blue-700">
+                                <i class="fa-solid fa-cart-plus mr-2"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div> -->
+
+
+                    <!-- PRODUCT 6 -->
+                    <!-- <div class="bg-white border rounded-xl overflow-hidden group hover:shadow-xl transition">
+
+                        <div class="relative bg-gray-100 p-5">
+
+                            <span class="absolute top-4 left-4 bg-red-500 text-white text-xs px-3 py-1 rounded-full">
+                                -8%
+                            </span>
+
+                            <button aria-label="Add to wishlist"
+                                    class="absolute top-4 right-4 bg-white rounded-full w-9 h-9 shadow">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=500"
+                                alt="Google Pixel smartphone"
+                                class="w-full h-52 object-contain group-hover:scale-105 transition">
+
+                        </div>
+
+                        <div class="p-5">
+
+                            <p class="text-xs text-gray-500">GOOGLE</p>
+
+                            <h3 class="font-bold text-lg mt-1">
+                                Google Pixel Series
+                            </h3>
+
+                            <div class="flex items-center gap-1 text-yellow-400 text-sm mt-2">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <span class="text-gray-400 ml-1">(52)</span>
+                            </div>
+
+                            <p class="text-sm text-gray-500 mt-3">
+                                128GB / Black
+                            </p>
+
+                            <div class="flex items-center gap-2 mt-4">
+                                <span class="text-xl font-bold text-blue-600">$649</span>
+                                <span class="text-sm text-gray-400 line-through">$699</span>
+                            </div>
+
+                            <p class="text-green-600 text-xs mt-2">
+                                <i class="fa-solid fa-circle-check"></i>
+                                In Stock
+                            </p>
+
+                            <button class="w-full bg-blue-600 text-white py-3 rounded-lg mt-4 hover:bg-blue-700">
+                                <i class="fa-solid fa-cart-plus mr-2"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--=====PROMOTION BANNER=====-->
+    <section class="max-w-7xl mx-auto px-4 pd-16">
+        <div class="bg-gray-950 text-white rounded-2xl p-8 md:p-14 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <!--Description of the promotion banner-->
+            <div>
+                <span class="text-blue-400 font-semibold">SPECIAL OFFER</span>
+                <h2 class="text-3xl md:text-4xl text-white font-extrabold mt-4">
+                    Upgrad Your Technology Today
+                </h2>
+                <p class="text-gray-400 mt-5 leading-7">Get exclusive offerson selected smartphones and accessories. Find your perfect device for your lifestyle.</p>
+                <a href="#products" class="inline-block bg-blue-600 px-8 py-3 rounded-lg mt-7 hover:bg-blue-700">
+                    Explore Offers
+                </a>
+            </div>
+
+            <!--Image of the promotion banner-->
+            <div>
+                <img
+                    src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=900"
+                    alt="Smartphone promotion banner"
+                    class="w-full h-64 object-cover rounded-xl"
+                >
+            </div>
+        </div>
+    </section>
+
+    <!--=====ACCESSORIES=====-->
+
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="mb-10">
+                <span class="text-blue-600 font-semibold">
+                    MORE THAN PHONES
+                </span>
+                <h2 class="text-3xl font-bold mt-2">
+                    Phone Accessories
+                </h2>
+                <p class="text-gray-500 mt-2">
+                    Everything you need for your smartphone.
+                </p>
+            </div>
+
+            <div id="accessories" class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- <div class="border rounded-xl p-5 hover:shadow-lg transition">
+                    <img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=500" alt="Wireless Earbuds" class="w-full h-40 object-contain">
+                    <h3 class="font-bold mt-4">Wireless Earbuds</h3>
+                    <p class="text-blue-600 font-bold mt-2">
+                        $49.00
+                    </p>
+                </div>
+
+                <div class="border rounded-xl p-5 hover:shadow-lg transition">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjdjdLvZUCNtl6xQiYLT4_xxHPuJlIoy7RWurZZIXEOQ&s=10"
+                        alt="Phone charger"
+                        class="w-full h-40 object-contain">
+                    <h3 class="font-bold mt-4">Fast Charger</h3>
+                    <p class="text-blue-600 font-bold mt-2">$25.00</p>
+                </div>
+
+                <div class="border rounded-xl p-5 hover:shadow-lg transition">
+                    <img src="https://images.unsplash.com/photo-1603313011101-320f26a4f6f6?w=500"
+                        alt="Phone case"
+                        class="w-full h-40 object-contain">
+                    <h3 class="font-bold mt-4">Phone Case</h3>
+                    <p class="text-blue-600 font-bold mt-2">$15.00</p>
+                </div> -->
+
+                <!-- <div class="border rounded-xl p-5 hover:shadow-lg transition">
+                <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=500"
+                     alt="Headphones"
+                     class="w-full h-40 object-contain">
+                <h3 class="font-bold mt-4">Headphones</h3>
+                <p class="text-blue-600 font-bold mt-2">$79.00</p> -->
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--=====Review=====-->
+    <section id="reviews" class="max-w-7xl mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <p class="text-blue-600 font-semibold">CUSTOMER REVIEWS</p>
+            <h2 class="text-3xl font-bold mt-2">What Our Customers Say</h2>
+            <p class="text-gray-500 mt-3">
+                Real shopping experiences from our customers.
+            </p>
+        </div>
+
+        <div id="review" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <!--Review 1-->
+            <!-- <div class="bg-white border rounded-xl p-7">
+                <div class="text-yellow-400 mb-4">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <p class="text-gray-600 leading-7">
+                    "Excellent service! My phone arrived quickly and the quality was exactly what I expected."
+                </p>
+
+                <div class="flex items-center gap-3 mt-6">
+                    <img src="https://i.pravatar.cc/100?img=12" class="w-12 h-12 rounded-full">
+                    <div>
+                        <h3 class="font-bold ">Dara Sok</h3>
+                        <p class="text-sm text-gray-500">
+                            Verified Customer
+                        </p>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Review 2 -->
+            <!-- <div class="bg-white border rounded-xl p-7">
+
+                <div class="text-yellow-400 mb-4">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <p class="text-gray-600 leading-7">
+                    "Good prices and friendly customer support.
+                    I definitely recommend this smartphone store."
+                </p>
+
+                <div class="flex items-center gap-3 mt-6">
+
+                    <img src="https://i.pravatar.cc/100?img=47"
+                        alt="Customer profile"
+                        class="w-12 h-12 rounded-full">
+
+                    <div>
+                        <h3 class="font-bold">Srey Leak</h3>
+                        <p class="text-sm text-gray-500">Verified Customer</p>
+                    </div>
+
+                </div>
+
+            </div> -->
+
+
+            <!-- Review 3 -->
+            <!-- <div class="bg-white border rounded-xl p-7">
+
+                <div class="text-yellow-400 mb-4">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+
+                <p class="text-gray-600 leading-7">
+                    "I found the phone I wanted at a reasonable price.
+                    The shopping experience was very smooth."
+                </p>
+
+                <div class="flex items-center gap-3 mt-6">
+
+                    <img src="https://i.pravatar.cc/100?img=33"
+                        alt="Customer profile"
+                        class="w-12 h-12 rounded-full">
+
+                    <div>
+                        <h3 class="font-bold">Vicheka</h3>
+                        <p class="text-sm text-gray-500">Verified Customer</p>
+                    </div>
+
+                </div>
+
+            </div> -->
+        </div>
+    </section>
+
+    <!--=====NEWSLETTER=====-->
+
+    <section class="bg-blue-600 py-16">
+        <div class="max-w-3xl mx-auto px-4 text-center text-white">
+            <i class="fa-regular fa-envelope text-5xl"></i>
+
+            <h2 class="text-3xl font-bold mt-5">
+                Subscribe to Our Newsletter
+            </h2>
+
+            <P class="text-blue-100 mt-3">
+                Get updates about new smartphones, special deals and discounts.
+            </P>
+            <form class="flex flex-cols sm:flex-row gap-3 mt-8">
+                <input type="email" placeholder="Enter email address"
+                    class="flex-1 px-5 py-4 rounded-lg text-gray-900 outline-none"
+                >
+                <button type="submit" class="bg-gray-950 px-8 p-y-4 font-semibold hover:bg-gray-800 rounded-lg">Subscibe</button>
+            </form>
+        </div>
+    </section>
+
+
+    <!--=====FOOTER=====-->
+
+    <footer id="contact" class="bg-gray-950 text-white">
+        <div class="max-w-7xl mx-auto px-4 py-14">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+                 <!--Brand-->
+                <div>
+                    <h2 class="text-2xl font-extrabold text-blue-500">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        Phone Shop
+                    </h2>
+
+                    <p class="text-gray-400 mt-5 leading-7">
+                        Your trusted destination for smartphones, technology and mobile accessories.
+                    </p>
+
+                    <div class="flex gap-4 mt-6 text-xl">
+                        <a href="#" aria-label="Facebook" class="hover:text-blue-500">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+
+                        <a href="#" aria-label="Instagram" class="hover:text-pink-500">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="Telegram" class="hover:text-blue-400">
+                            <i class="fa-brands fa-telegram"></i>
+                        </a>
+
+                        <a href="#" aria-label="TikTok" class="hover:text-gray-400">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Guick Links -->
+
+                <div>
+                    <h3 class="font-bold text-lg mb-5">Quick Links</h3>
+                    <ul class="text-gray-400 space-y-3">
+                        <li><a href="#" class="hover:text-white">Home</a></li>
+                        <li><a href="#products" class="hover:text-white">Products</a></li>
+                        <li><a href="#categories" class="hover:text-white">Categories</a></li>
+                        <li><a href="#deals" class="hover:text-white">Offers</a></li>
+                        <li><a href="#reviews" class="hover:text-white">Reviews</a></li>
+                    </ul>
+                </div>
+                <!--Customer Service-->
+                <div>
+                    <h3 class="font-bold text-lg mb-5">Customer Service</h3>
+                    <ul class="text-gray-400 space-y-3">
+                        <li><a href="#" class="hover:text-white">My Account</a></li>
+                        <li><a href="#" class="hover:text-white">Shopping Cart</a></li>
+                        <li><a href="#" class="hover:text-white">Order Tracking</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <!--Contact-->
+                <div>
+                    <h3 class="font-bold text-lg mb-5">Contact Us</h3>
+                    <ul class="space-y-4 text-gray-400">
+                        <li>
+                            <i class="fa-solid fa-location-dot text-blue-500 mr-3"></i>
+                            Phnom Penh, Cambodia
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone text-blue-500 mr-3"></i>
+                            +855 12 345 678
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-envelope text-blue-500 mr-3"></i>
+                            support@phoneshop.com
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-clock text-blue-500 mr-3"></i>
+                            Mon - Sun: 8AM - 9PM
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-7 flex flex-col md:flex-row justify-between gap-4 text-sm text-gray-500">
+                <p>
+                    @copy; 2026 PhoneShop. All rights reserved.
+                </p>
+                <p>
+                    Designed with HTML & Tailwind CSS.
+                </p>
+            </div>
+        </div>  
+    </footer>
+
+
+<!-- Product detail popup (static model) -->
+<div id="modal" class="hidden fixed inset-0 bg-black/60 z-[100] items-center justify-center p-4">
+
+    <div id="modal-content"
+         class="bg-white rounded-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto relative">
+
+    </div>
+
+</div>
+
+
+<!-- Cart drawer -->
+<div id="cart-overlay" class="hidden fixed inset-0 bg-black/60 z-[90]"></div>
+
+<aside id="cart-panel" class="fixed top-0 right-0 h-full w-full max-w-xl bg-white z-[100] shadow-xl flex flex-col translate-x-full transition-transform duration-3000">
+    <!-- Header -->
+    <div class="flext items-center justify-between p-5 border-b">
+        <h2 class="text-lg font-bold">
+            Cart Items (<span id="cart-title-count">0</span>)
+        </h2>
+        <button id="cart-close" aria-label="Close cart" class="bg-gray-100 hover:bg-gray-200 rounded-full w-9 h-9">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <!-- Items list (JS fills this) -->
+    <div id="cart-items" class="flex-1 overflow-y-auto px-5">
+
+        <!-- Example item (static model) -->
+        
+        
+    </div>   
+    
+    <!--Footer: total -->
+    <div class="border-t p-5">
+        <div>
+            <span>Total</span>
+            <span id="cart-total">$0</span>
+        </div>
+        <button class="w-full bg-blue-600 text-white py-3 rounded-lg mt-4 hover:bg-blue-700">
+            Checkout
+        </button>
+    </div>
+</aside>
+
+
+<script src="../js/script.js"></script>
+</body>
+</html>
